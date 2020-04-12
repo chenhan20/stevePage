@@ -1,11 +1,8 @@
 <template>
   <v-app>
-    <v-container>
-      <v-btn>asd</v-btn>
-      <v-content>
-        <LinkTree />
-      </v-content>
-    </v-container>
+    <v-content>
+      <LinkTree msg="SteveChuang LinkTree"/>
+    </v-content>
   </v-app>
 </template>
 
