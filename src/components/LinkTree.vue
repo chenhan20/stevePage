@@ -1,8 +1,8 @@
 <template>
   <v-container>
-        <v-row class="text-center">
-          <h1>{{ msg }}</h1>
-        </v-row>
+    <v-row class="text-center">
+      <h1>hi</h1>
+    </v-row>
   </v-container>
 </template>
 
@@ -27,7 +27,7 @@ export default {
       {
         text: "Facebook",
         href: "https://vuetifyjs.com/components/api-explorer"
-      },
+      }
     ]
   })
 };
