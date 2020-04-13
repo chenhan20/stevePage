@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Home',
     component: () => import('../views/Home.vue')
@@ -13,6 +12,11 @@ const routes = [
     path: '/linkTree',
     name: 'LinkTree',
     component: () => import('../views/LinkTree.vue')
+  },
+  {
+    path: '/linkTreeComponents',
+    name: 'LinkTree',
+    component: () => import('../components/LinkTree.vue')
   }
 ]
 
