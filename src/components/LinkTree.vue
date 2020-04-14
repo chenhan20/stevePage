@@ -10,6 +10,17 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </v-toolbar>
+        <template v-for="(next, i) in linkTree">
+          <v-list-item v-if="next.action" :key="i">
+            <v-list-item-action>
+              <v-icon>{{ next.action }}</v-icon>
+            </v-list-item-action>
+
+            <v-list-item-content>
+              <v-list-item-title>{{ next.text }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </template>
         <v-list>
           <v-row class="text-center" v-for="(next, i) in linkTree" :key="i">
             <v-col cols="12" offset-md="3" md="6">
