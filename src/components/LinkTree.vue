@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-col cols="12" offset-md="3" md="6">
+    <v-col cols="12" offset-md="3" md="6"    max-width="300">
       <v-card>
         <v-toolbar color="teal" dark>
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
@@ -10,23 +10,17 @@
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </v-toolbar>
-        <template v-for="(next, i) in linkTree">
-          <v-list-item v-if="next.action" :key="i">
-            <v-list-item-action>
-              <v-icon>{{ next.action }}</v-icon>
-            </v-list-item-action>
-
-            <v-list-item-content>
-              <v-list-item-title>{{ next.text }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-        <v-list>
-          <v-row class="text-center" v-for="(next, i) in linkTree" :key="i">
-            <v-col cols="12" offset-md="3" md="6">
-              <v-btn :href="next.href" class="subheading" target="_blank">{{ next.text }}</v-btn>
-            </v-col>
-          </v-row>
+        <v-list rounded>
+          <v-list-item-group v-model="item" color="primary">
+            <v-list-item v-for="(item, i) in linkTree" :key="i" :href="item.href" target="_blank">
+              <v-list-item-icon>
+                <v-icon v-text="item.icon"></v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title v-text="item.text"></v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
         </v-list>
       </v-card>
     </v-col>
@@ -43,54 +37,34 @@ export default {
     linkTree: [
       {
         text: "Facebook",
-        action: "label",
+        icon: "fab fa-facebook",
         href: "https://www.facebook.com/profile.php?id=100000189117019"
       },
       {
         text: "Instagram",
-        action: "label",
+        icon: "fab fa-instagram",
         href: "https://www.instagram.com/chenhan20/"
       },
       {
         text: "Youtube",
-        action: "label",
+        icon: "fab fa-youtube",
         href: "https://www.youtube.com/user/chenhan20"
       },
       {
         text: "Resume",
-        action: "label",
+        icon: "far fa-address-card",
         href: "https://calm-woodland-74729.herokuapp.com/SteveCard"
       },
       {
         text: "Linkedin",
-        action: "label",
+        icon: "fab fa-linkedin",
         href:
           "https://www.linkedin.com/in/%E6%89%BF%E7%BF%B0-%E8%8E%8A-4159b7139/"
       },
       {
         text: "Github",
-        action: "label",
+        icon: "fab fa-github",
         href: "https://github.com/chenhan20"
-      }
-    ],
-    items: [
-      {
-        action: "label",
-        title: "List item 1"
-      },
-      {
-        divider: true
-      },
-      {
-        action: "label",
-        title: "List item 2"
-      },
-      {
-        divider: true
-      },
-      {
-        action: "label",
-        title: "List item 3"
       }
     ]
   })

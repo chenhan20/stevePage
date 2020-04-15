@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-content>
-      <LinkTree msg="SteveChuang LinkTree"/>
+      <LinkTree msg="Steve LinkTree"/>
     </v-content>
   </v-app>
 </template>
