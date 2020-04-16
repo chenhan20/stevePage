@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-col cols="12" offset-md="3" md="6"    max-width="300">
+    <v-col cols="12" offset-md="4" md="4">
       <v-card>
         <v-toolbar color="teal" dark>
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
